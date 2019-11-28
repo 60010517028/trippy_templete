@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Prompt:200,300,400,500,600,700,800,900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/css/navbar.min.css">
+    <link rel="stylesheet" href="/css/carousel.min.css">
+    <link rel="stylesheet" href="/css/footer.min.css">
+    <link rel="stylesheet" href="/css/product.min.css">
+    <link rel="stylesheet" href="/css/blog.min.css">
+    <link rel="stylesheet" href="/css/cart.min.css">
+    <link rel="stylesheet" href="/css/uploadimg.css">
+    <link rel="stylesheet" href="/css/fashion-blog.min.css">
+    <link rel="stylesheet" href="/css/fashion-brand.min.css">
+    <link rel="stylesheet" href="/css/promotion.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>TRIPPY</title>
+</head>
+
+<body class="">
+
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 bg-white h-12 sm:h-16 xl:h-20 w-full">
+        <div class="h-full flex mx-auto">
+            <!-- logo รูปม้า -->
+            <a href="/template/home.html" class="w-6/12 md:w-1/12 pl-6 flex justify-start md:justify-center items-center">
+                <img src="/images/logo53x61.png" class="w-8 h-8 sm:w-12 sm:h-12 xl:w-16 xl:h-16 hover:cursor-pointer" alt="trippy logo">
+            </a>
+
+            <!-- ตะกร้า จะแสดงให้เห็นแต่แค่ Mobile  ถ้าหน้าจอขนาด มากกว่า 1024px จะไม่แสดง -->
+            <div class="w-4/12 md:w-1/12 md:order-2 flex justify-end md:justify-center items-center lg:hidden">
+                <span class="text-xs mr-1 trasition-1-ease-out">3</span>
+                <a href="/template/cart.html" class="text-gray" ><i class="fas fa-shopping-cart" style="transition: all 1s ease-out"></i></a>
+            </div>
+
+            <!-- Hamburger Bar จะแสดงให้เห็นแต่แค่ Mobile  ถ้าหน้าจอขนาด มากกว่า 768px จะไม่แสดง -->
+            <div class="w-2/12 pr-6 flex justify-end items-center md:hidden">
+                <i class="fas fa-bars text-gray trasition-1-ease-out" onclick="actionNavbarMenu(event)"></i>
+            </div>
+
+            <!-- เมนู Navbar -->
+            <ul class="navbar-menu-wrapper w-full md:order-1 md:w-10/12 md:w-8/12 bg-red-500 md:flex justify-end md:justify-around lg:justify-start">
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center"> 
+                    <a href="/template/product-all.html" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm ">NEW ARRIVAL</a>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center has-submenu"> 
+                    <a href="#" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm " onclick="actionNavbarSubMenu(event)">
+                        BRAND
+                        <i class="absolute ml-2 md:ml-1 fas fa-sort-down"></i>
+                    </a>
+                    <!-- Submenu -->
+                    <ul class="navbar-submenu w-full relative ">
+                        <div class="navbar-submenu-header shadow-md">
+                            <span class="text-white text-black flex-1 ml-4 mt-2">BRAND</span>
+                            <i class="text-white flex-1 text-right mr-4 mt-2 fas fa-arrow-circle-left text-2xl text-black" onclick="actionNavbarCloseSubmenu(event)"></i>
+                        </div>
+
+                        <li class="my-4 mt-12 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">PRETTY BOY GEAR</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">NORM</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">TOOMANYOPTIONS</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">BIAS</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">TZ WORLDWIDE</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">ANTI MIMIC</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">ONE DRINK AND WE GO HOME</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">GZUS</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">FUXCULTY</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">COMPLETE</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">ZIONA</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">DOTE</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">SWEEKS</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">LAUGH WORLDWIDE</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">15F</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">RASTACLAT THAILAND</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">IMYWD</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">TKW</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">SAVE MONEY FOR HONEY</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">FUXURY</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">SUPREME</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">A BATHING APE</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">RIPNDIP</a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">CHAMPION </a>
+                        </li>
+                        <li class="my-4       md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">ANTI SOCIAL SOCIAL CLUB</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center has-submenu">
+                    <a href="#" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm " onclick="actionNavbarSubMenu(event)">
+                        CATEGORY
+                        <i class="absolute ml-2 md:ml-1 fas fa-sort-down"></i>
+                    </a>
+                    <!-- Submenu -->
+                    <ul class="navbar-submenu w-full relative ">
+                        <div class="navbar-submenu-header shadow-md">
+                            <span class="text-white text-black flex-1 ml-4 mt-2">CATEGORY</span>
+                            <i class="text-white flex-1 text-right mr-4 mt-2 fas fa-arrow-circle-left text-2xl text-black" onclick="actionNavbarCloseSubmenu(event)"></i>
+                        </div>
+
+                        <li class="my-4 mt-12 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">PRETTY BOY GEAR</a>
+                        </li>
+                        <li class="my-4 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">NORM</a>
+                        </li>
+                        <li class="my-4 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">TOOMANYOPTIONS</a>
+                        </li>
+                        <li class="my-4 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">BIAS</a>
+                        </li>
+                        <li class="my-4 md:my-0 sm:mx-0 flex justify-center items-center md:justify-start sm:text-sm md:text-xs lg:text-sm">
+                            <a href="/template/product-all.html" class="">TZ WORLDWIDE</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center">
+                    <a href="/template/product-all.html" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm ">SALE</i> </a>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center"> 
+                    <a href="/template/blog.html" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm ">BLOG</a>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center"> 
+                    <a href="/template/confirm.html" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm ">CONFIRM PAYMENT</a>
+                </li>
+                <li class="my-8 md:my-0 md:mx-2 lg:mx-3 flex justify-center items-center"> 
+                    <a href="/template/contact.html" class="navbar-menu-item relative text-sm md:text-xs xl:text-sm ">CONTACT</a>
+                </li>
+
+                <!-- icon facebook , instagram , youtube จะโชว์ เมื่อกด Hamburger bar จะแสดงเฉพาะขนาดจอ 640px ลงมา  -->
+                <li class="my-8 sm:my-0 sm:mx-4 flex justify-center items-center mt-16 md:hidden">
+                    <a href="https://facebook.com" class=""> <i class="fab fa-facebook  mx-4 text-2xl text-blue-500"></i></a>
+                    <a href="https://instagram.com" class=""> <i class="fab fa-instagram mx-4 text-2xl text-pink-500"></i></a>
+                    <a href="https://youtube.com" class=""> <i class="fab fa-youtube   mx-4 text-2xl text-red-600"></i></a>
+                </li>
+            </ul>
+
+            <!-- icon ตะกร้า , facebook , instagram , youtube จะแสดงให้เห็น หน้าจอขนาด 1024px ขึ้น -->
+            <div class="hidden w-3/12 md:order-2 lg:flex sm:justify-end xl:justify-start sm:items-center md:pr-4">
+                <a href="/template/cart.html"> <span class="">1</span><i class="fas fa-shopping-cart mx-2 text-base lg:text-xl text-gray "></i> </a>
+                <a href="https://facebook.com" target="_blank" class=""> <i class="fab fa-facebook mx-2 text-base lg:text-xl iconder-fb"></i></a>
+                <a href="https://instagram.com" target="_blank" class=""> <i class="fab fa-instagram mx-2 text-base lg:text-xl iconder-ig hover:text-pink-500"></i></a>
+                <a href="https://youtube.com" target="_blank" class=""> <i class="fab fa-youtube mx-2 text-base lg:text-xl iconder-y hover:text-red-600"></i></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- breadcrumbs -->
+    <ul class="breadcrumbs mt-16 xl:mt-32 mr-4 flex justify-end xl:pr-4">
+        <li><a href="/template/home.html" class="text-xs">HOME</a></li>
+        <li><a href="/template/product-all.html" class="text-xs">NEW ARRIVAL</a></li>
+    </ul>
+
+    <!-- Title Page -->
+    <div class="page-header-title mt-4 px-4">
+        <h1 class="text-2xl md:text-3xl xl:text-5xl font-medium xl:font-semibold text-center">NEW ARRIVAL</h1>
+        <p class="text-xs lg:text-sm xl:text-base text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, modi.</p>
+    </div>
+
+
+    <!-- Sort And Btn category product -->
+    <div class="sortAndCateProduct flex mt-16 px-1">
+        <!-- Sort -->
+        <div class="flex-1 text-left lg:text-right lg:mr-4">
+            <select name="" id="" class="bg-gray-300 rounded w-1/2 text-sm lg:bg-white lg:w-2/12 lg:border">
+                <option value="">Sort By</option>
+                <option value="">Featured</option>
+                <option value="">Newest</option>
+                <option value="">Price: Hight-Low</option>
+                <option value="">Price: Low-Hight</option>
+            </select>
+        </div>
+        <!-- btn category Product -->
+        <div class="flex-1 relative text-right lg:hidden">
+            <a href="#" class="pr-8" onclick="actionProduCategoryActive(event)">
+                <span class="text-sm">Category</span>
+                <i class="fas fa-th absolute mt-1 ml-1"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- product all -->
+    <section class="product-section mt-4 px-1 lg:flex">
+        <!-- Band And Category -->
+        <ul class="product-category text-center pt-8 lg:text-left lg:pt-0 lg:pr-2">
+            <a href="" class="close-product-cate" onclick="actionProduCategoryInActive(event)"></a>
+            <li class="product-category-title my-4 lg:mt-0">
+                <a href="#" class="product-category-hassub text-xl lg:font-semibold lg:pl-4">BRAND <i class="fas fa-angle-down"></i></a>
+                <ul class="product-subcate">
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 1</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 2</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 3</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 4</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 5</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 6</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 7</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 8</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 9</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Brand Sub Menu 10</a></li>
+                </ul>
+            </li>
+            <li class="product-category-title my-4 lg:mt-4">
+                <a href="#" class="product-category-hassub text-xl lg:font-semibold lg:pl-4">CATEGORY <i class="fas fa-angle-down"></i></a>
+                <ul class="product-subcate">
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 1</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 2</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 3</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 4</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 5</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 6</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 7</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 8</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 9</a></li>
+                    <li class="my-4 lg:my-2 lg:py-2 lg:pl-4"><a href="/template/product-all.html" class="text-gray lg:font-light">Category Sub Menu 10</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+        <div class="product-wrapper lg:w-10/12 lg:pr-4"> 
+
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <hr class="bg-gray-500 mt-16">
+    <footer class=" w-11/12 lg:w-3/4 xl:w-1/2 mx-auto flex flex-col md:flex-row mt-8">
+        <div class="flex-1 mb-8 text-center">
+            <h3 class="font-medium text-gray">CONTACT</h3>
+            <p class="text-gray font-light text-sm mt-3">ABOUT US</p>
+            <p class="text-gray font-light text-sm">STORE LOCATION</p>
+            <p class="text-gray font-light text-sm">LINE : @TRIPPYKK</p>
+            <p class="text-gray font-light text-sm">CALL : 0910617763</p>
+        </div>
+        <div class="flex-1 text-center">
+            <h3 class="font-medium text-gray">SHIPING</h3>
+            <p class="text-gray font-light text-sm mt-3">SHIPPING FEE</p>
+            <p class="text-gray font-light text-sm">SHIPPING STATUS</p>
+
+            <h3 class="mt-8 font-medium text-gray ">FOLLOW US</h3>
+            <div class="flex justify-center mt-3">
+                <a href="https://facebook.com" class=""> <i class="fab fa-facebook      mx-2 text-xl iconder"></i></a>
+                <a href="https://instagram.com" class=""> <i class="fab fa-instagram     mx-2 text-xl iconder"></i></a>
+                <a href="https://youtube.com" class=""> <i class="fab fa-youtube       mx-2 text-xl iconder"></i></a>
+            </div>
+
+            <h3 class="mt-8 font-medium text-gray ">SUBSCRIBE</h3>
+            <div class="w-full sm:w-2/3 md:w-full mx-auto mb-8 pt-3">
+                <div class="relative">
+                    <input type="text" class="border border-gray pl-4 pr-8 py-2 rounded w-full" placeholder="Email">
+                    <div class="absolute right-0 top-0 mt-2 mr-3">
+                        <i class="fas fa-paper-plane text-gray"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 text-center">
+            <h3 class="font-medium text-gray">CUSTOMER SERVICE</h3>
+            <p class="text-gray font-light text-sm mt-3">VIP MEMBER</p>
+            <p class="text-gray font-light text-sm">HOW TO ORDER</p>
+        </div>
+    </footer>
+
+    <!-- btn to top -->
+    <div class="mt-16 w-full relative">
+        <div class="absolute bottom-0 right-0 mr-8 mb-2">
+            <a href="#" id="btntotop">
+                <img src="/images/up-icon40x49.png" class="w-6 w-full" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- copy right wynnsoft -->
+    <div class="mt-16" style="background: linear-gradient(90deg, #2f9cee, #755ac5, #b120a3);">
+        <p class="text-xs font-light py-1 text-center text-white">@2025 wynnsoft solution design</p>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/uploadimg.js"></script>
+    <script src="/js/product-all.js"></script>
+    <script src="/js/script.js"></script>
+
+    <script>
+        for (let i = 0; i < 20; i++) {
+            if (i % 2 == 0) {
+                //ตัวอย่าง new
+                $('.product-wrapper').append(`
+                    <a href="/template/product-detail.html" class="item relative">
+                        <img src="/images/product/${i}.jpg" class="rounded product-image  w-full hover:shadow-lg" alt="">
+                        <span class="absolute bg-blue-700 text-white px-2  text-xs top-0 left-0">NEW</span>
+                        <div class="flex px-1">
+                            <span class="flex-1 text-xs lg:text-sm text-gray">Sportswear Tech Fleece</span>
+                            <span class="flex-1 text-sm lg:text-base font-semibold text-right self-end">฿500</span>
+                        </div>
+                    </a>
+                `);
+            } else {
+                //ตัวอย่าง ลดราคา
+                $('.product-wrapper').append(`
+                    <a href="/template/product-detail.html" class="item relative">
+                        <img src="/images/product/${i}.jpg" class="rounded product-image w-full hover:shadow-lg" alt="">
+                        <span class="absolute text-white px-2  text-xs top-0 left-0"
+                            style="background-color:#ed008c">80%</span>
+                        <div class="flex px-1">
+                            <span class="flex-1 text-xs text-gray">Sportswear Tech Fleece</span>
+                            <div class="flex flex-col">
+                                <span class="flex-1 text-xs lg:text-sm font-semibold text-right self-end line-through"
+                                    style="color:#636363;">฿500</span>
+                                <span class="flex-1 text-sm lg:text-base font-semibold text-right self-end"
+                                    style="color:red;">฿1,000</span>
+                            </div>
+                        </div>
+                    </a>
+                `)
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,MAAM,EAAE,KAAK;EACb,KAAK,EAAC,IAAI;EAEV,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;CAM9B;;AAED,AAAA,YAAY,CAAA;EAER,KAAK,EAAE,eAAe;CAKzB",
+    "sources": [
+        "fashion-brand.scss"
+    ],
+    "names": [],
+    "file": "fashion-brand.css"
+}

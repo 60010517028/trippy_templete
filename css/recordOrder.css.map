@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAA;EACb,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAKtB;;AAPD,AAII,iBAJa,CAIb,IAAI,CAAA;EACA,WAAW,EAAE,EAAE;CAClB",
+    "sources": [
+        "recordOrder.scss"
+    ],
+    "names": [],
+    "file": "recordOrder.css"
+}

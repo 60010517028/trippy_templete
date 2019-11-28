@@ -1,0 +1,191 @@
+.product-image {
+    height: 250px !important;
+    object-fit: contain !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.sortAndCateProduct,.product-section{
+    @media screen and(min-width:1280px) {
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and(min-width:1366px) {
+        // grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+}
+
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-row-gap: 20px;
+
+    @media screen and(min-width:640px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and(min-width:768px) {
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 40px;
+    }
+    @media screen and(min-width:1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 50px;
+    }
+    @media screen and(min-width:1280px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+    @media screen and(min-width:1366px) { 
+    }
+}
+
+
+.product-category{
+    position:fixed;
+    width:50%;
+    height:100vh;
+    background-color: white;
+    z-index: 100;
+    top:0px;
+    overflow-y: scroll;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    left:-500px;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    &.active{
+        left:0px;
+        opacity: 1;
+
+        .close-product-cate{
+            position:fixed;
+            right: 0px;
+            top:0px;
+            height: 100vh;
+            width:50%;
+            background: rgba(0,0,0,0.7);
+        }
+    }
+
+
+    @media screen and(min-width: 1024px){
+        position: unset;
+        z-index: 0;
+        opacity: 1;
+        border:0px;
+        overflow-y: unset;
+        left:0px;
+        height: 100%;
+        width:25%;
+        
+        
+    }
+
+    
+    .close-product-cate{
+        position:absolute;
+        right: -5%;
+        top:10px;
+    }
+}
+
+
+
+.product-subcate{
+    @media screen and(min-width: 1024px){
+        li{
+            &:hover{
+                background: linear-gradient(90deg, #2f9cee, #755ac5 70%, #b120a3);
+                border-left: 3px solid rgb(189, 19, 189);
+                cursor: pointer;
+                a{
+                    color:white !important;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+
+.product-detail{
+
+    @media screen and(min-width:1280px) {
+        max-width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .product-image-wrapper{
+        display:flex;
+        flex-direction: column;
+
+
+        .image-main{
+            width: 100%;
+            height: 250px;
+            display:flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+
+            border: 1px solid rgba(0,0,0,0.1);
+            
+
+            @media screen and(min-width: 768px){
+                height:380px;
+            }
+            @media screen and(min-width: 1024px){
+                // height:380px;
+            }
+            @media screen and(min-width: 1280px){
+                height:430px;
+            }
+
+            img {
+                object-fit: contain;
+                width:100%;
+            }
+        }
+        .image-sub{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            @media screen and(min-width:640px){
+                justify-content: center;
+            }
+            @media screen and(min-width:768px){
+                justify-content: flex-start;
+            }
+
+            a{
+                width: 5rem;
+                height: 6rem;
+                margin-right: 0.25rem;
+                margin-left: 0.25rem;
+                margin-bottom: 0.25rem;
+
+                @media screen and(min-width:768px){
+                    width: 4rem;
+                    height: 5rem;
+                }
+                @media screen and(min-width:1280px){
+                    width: 5rem;
+                    height: 6rem;
+                }
+
+                img{
+                    width:100%;
+                    height:100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

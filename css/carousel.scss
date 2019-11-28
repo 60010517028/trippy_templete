@@ -1,0 +1,174 @@
+//Carousel Slide Image
+$sm : '640px';
+$md : '768px';
+$lg : '1024px';
+$xl : '1280px';
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: 50px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+  // margin-bottom: 15px;
+  z-index:0;
+
+  @media screen and(min-width: $sm) {
+    margin-top: 65px;
+  }
+
+  .owl-dots {
+    display:none;
+    position: absolute !important;
+    width: 100% !important;
+    bottom: 0% !important;
+    .owl-dot {
+      span {
+        width: 8px !important;
+        height: 8px !important;
+        @media screen and(min-width: $sm) {
+          width: 0.8em !important;
+          height: 0.8em !important;
+        }
+        @media screen and(min-width: $md) {
+          width: 0.9em !important;
+          height: 0.9em !important;
+        }
+      }
+    }
+  }
+
+  span.carousel-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    z-index: 5;
+    cursor: pointer;
+    i {
+      color: white;
+
+      @media screen and(min-width: $sm) {
+        font-size: 1.3em;
+      }
+      @media screen and(min-width: $md) {
+        font-size: 1.5em;
+      }
+    }
+  }
+  span.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    z-index: 5;
+    cursor: pointer;
+    i {
+      color: white;
+
+      @media screen and(min-width: $sm) {
+        font-size: 1.3em;
+      }
+      @media screen and(min-width: $md) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .imagetopdiv{
+    position: absolute;
+    left:50%;
+    top:90%;
+    transform: translate(-50%,-50%);
+    z-index:100;
+
+    @media screen and(min-width: 640px){
+      top:92%;
+    }
+    @media screen and(min-width: 768px){
+      top:93%;
+    }
+    @media screen and(min-width: 1024px){
+      top:93%;
+    }
+    @media screen and(min-width: 1280px){
+      top:90%;
+    }
+
+    a{
+      img{
+        width: 1rem;
+        @media screen and(min-width: 640px){
+          width: 1.5rem !important;
+        }
+        @media screen and(min-width: 768px){
+          width: 1.5rem !important;
+        }
+        @media screen and(min-width: 1024px){
+          width: 2rem !important;
+        }
+        @media screen and(min-width: 1280px){
+          width: 2.5rem !important;
+        }
+        
+      }
+    }
+  }
+
+}
+
+.titleHeader{
+  position: absolute;
+  top:20%;
+  transform: translateY(-50%);
+  z-index:100;
+
+  .title{
+    letter-spacing: 5px;
+    @media screen and(min-width: 1280px){
+      letter-spacing: 15px;
+    }
+    @media screen and(min-width: 1366px){
+      font-size: 5rem !important;
+      letter-spacing: 20px;
+    }
+  }
+
+  .subtitle{
+    letter-spacing: 5px;
+    @media screen and(min-width: 1280px){
+      letter-spacing: 10px;
+    }
+  }
+}
+
+
+.imagetrippy{
+  position: absolute;
+  left:50%;
+  top:60%;
+  transform: translate(-50%,-50%);
+  z-index:100;
+  img{
+    width: 4rem !important;
+
+    @media screen and(min-width: 640px){
+      width: 8rem !important;
+    }
+    @media screen and(min-width: 768px){
+      width: 10rem !important;
+    }
+    @media screen and(min-width: 1024px){
+      width: 15rem !important;
+    }
+    @media screen and(min-width: 1280px){
+      width: 20rem !important;
+    }
+  }
+
+}
+
+
+
+.text-gray{
+  color:#636363;
+}
+// End .carousel-wrapper

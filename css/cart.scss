@@ -1,0 +1,13 @@
+.cart-wrapper{
+    @media screen and(min-width:1280px) {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .cart-summary{
+        background: linear-gradient(-15deg, #2f9cee, #755ac5 , #b120a3) !important;
+        color: white;
+    }
+}

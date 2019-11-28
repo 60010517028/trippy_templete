@@ -1,0 +1,31 @@
+.promotion {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.promotion .promotion-content {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .promotion .promotion-content {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+  }
+  .promotion:hover .promotion-content {
+    opacity: 1;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+/*# sourceMappingURL=promotion.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,MAAM,EAAE,WAAW;EACnB,KAAK,EAAC,IAAI;EACV,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,QAAQ,EAAC,QAAQ;EACjB,cAAc,EAAC,EAAE;CAOpB;;AALG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EATvC,AAAA,aAAa,CAAA;IAUL,eAAe,EAAE,KAAK;IACtB,mBAAmB,EAAE,KAAK;GAGjC",
+    "sources": [
+        "fashion-blog.scss"
+    ],
+    "names": [],
+    "file": "fashion-blog.css"
+}
